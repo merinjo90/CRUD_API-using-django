@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register',views.Register.as_view(),name='Register'),
     path('login/',obtain_auth_token,name='login'),
+    path('welcome',views.Welcome.as_view(),name='Welcome'),
 ]
