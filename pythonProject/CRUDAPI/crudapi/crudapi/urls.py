@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from articleapp import views
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register',views.Register.as_view(),name='Register')
+    path('register',views.Register.as_view(),name='Register'),
+    path('login/',obtain_auth_token,name='login'),
 ]
