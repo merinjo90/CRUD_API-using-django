@@ -28,4 +28,3 @@ class Welcome(APIView):
     def get(self,request):
         content={'user':str(request.user),'userid':str(request.user.id)}
         return Response(content)
-
