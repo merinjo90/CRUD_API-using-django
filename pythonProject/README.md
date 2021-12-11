@@ -5,9 +5,7 @@ Django REST framework is a powerful and flexible toolkit for building Web APIs.
 
 Django is based on MVT (Model View Template) architecture and revolves around CRUD (Create, Retrieve, Update, Delete) operations. CRUD can be best explained as an approach to building a Django web application. In general CRUD means performing Create, Retrieve, Update and Delete operations on a table in a database
 
-
-![App Screenshot](file:///home/merin/Downloads/Screenshot%20from%202021-12-11%2011-05-57.png)
-
+![Screenshot from 2021-12-11 11-05-57](https://user-images.githubusercontent.com/83909801/145689988-26091977-c734-4505-9949-140ca5a95737.png)
 
 
 
