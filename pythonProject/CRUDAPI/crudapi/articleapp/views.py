@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .serializers import UserRegister
 from rest_framework.views import APIView
 from rest_framework.authtoken.models import Token
+from rest_framework.response import Response
 
 # Create your views here.
 
@@ -15,9 +16,9 @@ class Register(APIView):
             data['response']='registered'
             data['username']=account.username
             data['email']=account.email
-            token=Token.objects.get(user=account).key
-            data['token']=token
+            token,create=Token.objects.get_or_create(user=account)
+            data['token']=token.key
         else:
             data=serializer.errors
-        return render(data)
+        return Response(data)
 
