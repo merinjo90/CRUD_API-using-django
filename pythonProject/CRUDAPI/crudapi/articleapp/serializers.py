@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
+from .models import ArticleInf
 
 User=get_user_model()
 
@@ -22,4 +23,15 @@ class UserRegister(serializers.ModelSerializer):
         reg.set_password(password)
         reg.save()
         return reg
+
+class ArticleInfSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=ArticleInf
+        fields="__all__"
+#
+# class ArticleDataSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = ArticleInfoSerializer
+#         field = "__all__"
+#
 
