@@ -64,4 +64,9 @@ class ArticleUpdatedel(APIView):
             return Response(artserialize.data,status=status.HTTP_200_OK)
         return Response(artserialize.errors,status=status.HTTP_400_BAD_REQUEST)
 
+    def delete(self, request, pk):
+        artobj = ArticleInf.objects.get(pk=pk)
+        print(artobj)
+        artobj.delete()
+        return Response('User deleted')
 
