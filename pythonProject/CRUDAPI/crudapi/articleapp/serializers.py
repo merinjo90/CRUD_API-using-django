@@ -28,10 +28,3 @@ class ArticleInfSerializer(serializers.ModelSerializer):
     class Meta:
         model=ArticleInf
         fields="__all__"
-#
-# class ArticleDataSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = ArticleInfoSerializer
-#         field = "__all__"
-#
-
